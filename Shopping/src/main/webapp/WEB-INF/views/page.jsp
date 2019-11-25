@@ -21,7 +21,7 @@
 
 <title>Ecommerce</title>
 <script>
-	window.menu = '${title}';
+	window.menu = '${title}'; //title from page controller
 </script>
 
 
@@ -59,6 +59,10 @@
 			<c:if test="${userClickedContact==true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			<c:if test="${userClickedAllProducts==true or userClickedCategoryProducts==true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 		</div>
 
 		<!-- /.container -->

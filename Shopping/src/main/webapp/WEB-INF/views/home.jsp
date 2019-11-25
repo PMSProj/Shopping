@@ -1,14 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
  <div class="container">
 
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Shop Name</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Printable</a>
-                    <a href="#" class="list-group-item">Cupcake Wrappers</a>
-                    <a href="#" class="list-group-item">Authentic Dragon Bones</a>
-                </div>
+            <%@include file="./shared/sidebar.jsp"%>
+               
             </div>
 
             <div class="col-md-9">
