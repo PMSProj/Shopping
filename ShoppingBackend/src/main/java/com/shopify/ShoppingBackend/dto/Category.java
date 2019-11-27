@@ -1,11 +1,27 @@
 package com.shopify.ShoppingBackend.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String description;
+	@Column(name="imageURL")
 	private String imageURL;
-	private boolean active=true;
+	private boolean is_active=true;
+	
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", imageURL=" + imageURL
+				+ ", is_active=" + is_active + "]";
+	}
 	public int getId() {
 		return id;
 	}
@@ -31,10 +47,10 @@ public class Category {
 		this.imageURL = imageURL;
 	}
 	public boolean isActive() {
-		return active;
+		return isActive();
 	}
 	public void setActive(boolean active) {
-		this.active = active;
+		this.is_active = active;
 	}
 		
 

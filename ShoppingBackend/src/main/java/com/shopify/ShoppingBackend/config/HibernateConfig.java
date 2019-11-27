@@ -1,4 +1,4 @@
-package com.shopify.Shopping.Backend.config;
+package com.shopify.ShoppingBackend.config;
 
 import java.util.Properties;
 
