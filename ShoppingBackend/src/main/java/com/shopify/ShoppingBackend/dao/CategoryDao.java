@@ -5,10 +5,11 @@ import java.util.List;
 import com.shopify.ShoppingBackend.dto.Category;
 
 public interface CategoryDao {
-	
+	public Category getCatById(Integer id);	
+	public List<Category> categorylist();
 	boolean add(Category category);
-	List<Category> list();
-
-	Category get(int id);	
+	boolean update(Category category);
+	boolean delete(Category category);
+	
 
 }
