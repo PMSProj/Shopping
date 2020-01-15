@@ -28,8 +28,8 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
 
-<!-- Bootstrap readable theme -->
-<link href="${css}/bootstrap-readable.css" rel="stylesheet">
+ <!-- Bootstrap readable theme --> 
+<%-- <link href="${css}/bootstrap-readable.css" rel="stylesheet"> --%>
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet" type="text/css">
@@ -69,10 +69,13 @@
 		<!-- footer -->
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- JavaScript -->
+		<!-- jquery -->
 		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.js"></script>
-
+		<!-- Bootstrap core Javascript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- Datatable plugin -->
+        <script src="${js}/jquery.dataTables.js"></script>
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
 	</div>
