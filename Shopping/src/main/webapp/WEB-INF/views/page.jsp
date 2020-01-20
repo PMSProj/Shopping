@@ -22,14 +22,21 @@
 <title>Ecommerce</title>
 <script>
 	window.menu = '${title}'; //title from page controller
+	
+	window.contextRoot='${contextRoot}'
+	
+	
 </script>
 
 
 <!-- Bootstrap core CSS -->
-<link href="${css}/bootstrap.css" rel="stylesheet">
+<link href="${css}/bootstrap.min.css" rel="stylesheet">
 
- <!-- Bootstrap readable theme --> 
-<%-- <link href="${css}/bootstrap-readable.css" rel="stylesheet"> --%>
+<!-- Bootstrap readable theme -->
+<link href="${css}/bootstrap-theme.css" rel="stylesheet">
+
+<!-- Bootstrap jquery datatable -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet" type="text/css">
@@ -59,10 +66,11 @@
 			<c:if test="${userClickedContact==true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			<c:if test="${userClickedAllProducts==true or userClickedCategoryProducts==true}">
+			<c:if
+				test="${userClickedAllProducts==true or userClickedCategoryProducts==true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
-			
+
 		</div>
 
 		<!-- /.container -->
@@ -73,9 +81,13 @@
 		<script src="${js}/jquery.js"></script>
 		<!-- Bootstrap core Javascript -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
+
 		<!-- Datatable plugin -->
-        <script src="${js}/jquery.dataTables.js"></script>
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+			<!-- Datatable Bootrap script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
 	</div>
