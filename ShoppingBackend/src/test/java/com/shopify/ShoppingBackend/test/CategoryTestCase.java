@@ -25,16 +25,14 @@ public class CategoryTestCase {
 	}
 
 	/*
-	 * @Test public void testAddCategory() {
-	 * 
-	 * category = new Category(); category.setName("Laptop");
+	 * @Test public void testAddCategory() { category = new Category();
+	 * category.setName("Laptop");
 	 * category.setDescription("This is some description for Laptop");
 	 * category.setImageURL("LAP_1.png");
 	 * 
-	 * assertEquals("successfully added a category inside the table!",
-	 * true,categoryDAO.add(category)); }
+	 * assertEquals("successfully added a category inside the table!", true,
+	 * categoryDAO.add(category)); }
 	 */
-
 	/*
 	 * @Test public void testGetCategory() { category = categoryDAO.getCatById(3);
 	 * assertEquals("successfully fetched a category", "Laptop",
@@ -60,33 +58,38 @@ public class CategoryTestCase {
 	 * assertEquals("successfully update a category",1,
 	 * categoryDAO.categorylist().size()); }
 	 */
-	@Test 
-	public void testAddCategory() {
-//		  category = new Category(); 
-//		  category.setName("Laptop");
-//		  category.setDescription("This is some description for Laptop");
-//		  category.setImageURL("LAP.png");
-//		  assertEquals("successfully added a category inside the table!", true,categoryDAO.add(category)); 
-//		  
-//		  category = new Category(); 
-//		  category.setName("Television");
-//		  category.setDescription("This is some description for tv");
-//		  category.setImageURL("TV.png");
-//		  assertEquals("successfully added a category inside the table!", true,categoryDAO.add(category)); 
-//		  
-//		  category = new Category(); 
-//		  category.setName("Camera");
-//		  category.setDescription("This is some description for Camera");
-//		  category.setImageURL("CAM.png");
-//		  assertEquals("successfully added a category inside the table!", true,categoryDAO.add(category)); 
-		  
-		   category = categoryDAO.getCatById(27);
-		   category.setName("Lappy");
-		   
-		   assertEquals("successfully update a category",true, categoryDAO.update(category)); 
-		   assertEquals("successfully update a category",true,categoryDAO.delete(category)); 
-		   assertEquals("successfully update a category",2, categoryDAO.categorylist().size()); 
-			  
-		  }
-		 
+
+	@Test public void testAddCategory()
+	{
+	 category = new Category();
+	 category.setName("Laptop");
+	 category.setDescription("This is some description for Laptop");
+	 category.setImageURL("LAP.png");
+	 assertEquals("successfully added a category inside the table!",
+	 true,categoryDAO.add(category));
+	 
+	 category = new Category(); 
+	 category.setName("Mobile");
+	 category.setDescription("This is some description for mobile");
+	 category.setImageURL("MOb.png");
+	  assertEquals("successfully added a category inside the table!",
+	  true,categoryDAO.add(category));
+	 
+	  category = new Category(); 
+	  category.setName("Telivision");
+	  category.setDescription("This is some description for TV");
+	  category.setImageURL("TV.png");
+	 assertEquals("successfully added a category inside the table!",
+	  true,categoryDAO.add(category));
+	 
+
+//		   category = categoryDAO.getCatById(27);
+//		   category.setName("Lappy");
+
+//		   assertEquals("successfully update a category",true, categoryDAO.update(category)); 
+//		   assertEquals("successfully update a category",true,categoryDAO.delete(category)); 
+//		   assertEquals("successfully update a category",2, categoryDAO.categorylist().size()); 
+//			  
+	// }
+	}
 }

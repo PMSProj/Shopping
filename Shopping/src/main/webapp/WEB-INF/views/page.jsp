@@ -70,7 +70,12 @@
 				test="${userClickedAllProducts==true or userClickedCategoryProducts==true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
-
+			
+			<!-- Load only when user clicked single product -->
+           <c:if
+				test="${userClickedShowProducts==true }">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 		</div>
 
 		<!-- /.container -->

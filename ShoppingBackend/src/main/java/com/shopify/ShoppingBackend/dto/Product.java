@@ -28,14 +28,17 @@ public class Product implements Serializable {
 	@Column(name = "unit_Price")
 	private double unitPrice;
 	private Integer qunatity;
-	@JsonIgnore
+
 	@Column(name = "is_active")
+	@JsonIgnore
 	private boolean active;
-	@JsonIgnore
+
 	@Column(name = "category_Id")
-	private Integer categoryId;
 	@JsonIgnore
+	private Integer categoryId;
+
 	@Column(name = "supplier_Id")
+	@JsonIgnore
 	private Integer supplierId;
 	private Integer purchases;
 	private Integer views;

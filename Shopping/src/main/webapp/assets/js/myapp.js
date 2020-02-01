@@ -1,6 +1,6 @@
 
 $(function(){
-	//solving active menu problem
+	// solving active menu problem
 	switch(menu){
 	case 'About Us':
 		$('#about').addClass('active');
@@ -16,23 +16,24 @@ $(function(){
 	
 		
 	default:
-		if(menu=="Home") break;
+		if(menu="Home") break;
 		$('#listProducts').addClass('active');
 	    $('#a_'+menu).addClass('active');
 		break;
 	
 	}
 	
-	//code for jquery datatable
+	// code for jquery datatable
 	
 	var $table=$('#productListTable');
 	
-	//execute the code only when we have this table
+	// execute the code only when we have this table
 	if($table.length){
-//		console.log('Inside the table');	
+// console.log('Inside the table');
 		var jsonUrl='';
 		if(window.categoryId==''){
 			jsonUrl=window.contextRoot+'/json/data/all/products';
+			console.log('Hi');
 		}
 		else{
 			jsonUrl=window.contextRoot+'/json/data/category/'+window.categoryId+'/products';
@@ -44,11 +45,11 @@ $(function(){
 				url:jsonUrl,
 			   dataSrc: ''   // it is a collection of object without any name
 			},	
-			columns:[      //collection of object
-				{
+			columns:[      // collection of object
+				  {
 					data:'code',
 					mRender=function(data,type,row){
-						return '<img src="'+window.ContextRoot+'/resources/images/'+data+'.jpg"  class="dataTableImg"/>';
+					return '<img src="'+window.ContextRoot+'/resources/images/'+data+'.jpg"  class="dataTableImg"/>';
 					}
 				},
 				{

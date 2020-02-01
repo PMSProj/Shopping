@@ -29,9 +29,11 @@ public class HibernateConfig {
 	
 	
 	        private final static String  DATABASE_DRIVER="oracle.jdbc.driver.OracleDriver";
-			private final static String	DATABASE_URL="jdbc:oracle:thin:@localhost:1521:XE";
-			private final static String DATABSE_password="Prity@13";
+			private final static String	DATABASE_URL="jdbc:oracle:thin:@localhost/xe";
+//			ESS	enercon@//172.18.16.108:1521/orcl
+			private final static String DATABSE_password="Prics@1301";
 			private final static String DATABASE_USERNAME="SYSTEM";
+//			Prics@1301
 
 
 			private final static String hibernate_dialect="org.hibernate.dialect.Oracle10gDialect";

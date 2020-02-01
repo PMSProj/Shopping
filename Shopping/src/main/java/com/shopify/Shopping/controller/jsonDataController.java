@@ -13,6 +13,7 @@ import com.shopify.ShoppingBackend.dto.Product;
 @Controller
 @RequestMapping("/json/data")
 public class jsonDataController {
+	
 	@Autowired
 	private ProductDao productDao;
 	
@@ -23,7 +24,7 @@ public class jsonDataController {
 	}
 	@RequestMapping("/category/{id}/products")
 	@ResponseBody
-	public List<Product> getProductsByCategory(@PathVariable Integer id){
+	public List<Product> getProductsByCategory(@PathVariable  Integer id){
 		return productDao.listActiveProductsByCategory(id);
 	}
 

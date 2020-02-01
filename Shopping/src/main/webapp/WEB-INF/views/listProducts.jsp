@@ -14,11 +14,11 @@
 
 			<!-- added breadcrum products -->
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xs-12">
 					<c:if test="${userClickedAllProducts==true}">
 
 						<script>
-							window.categoryId = ' ';
+							window.categoryId ='';
 						</script>
 						<ol class="breadcrumb">
 							<li><a href="${contextRoot}/home">Home</a></li>
@@ -42,9 +42,11 @@
 
 			<div class="row">
 				<div class="col-xs-12">
-					<table id="	" class="table table-striped table-bordered">
+					<table id="productListTable"
+						class="table table-striped table-borderd">
 						<thead>
 							<tr>
+								<th></th>
 								<th>Name</th>
 								<th>Brand</th>
 								<th>Price</th>
@@ -53,15 +55,16 @@
 							</tr>
 						</thead>
 
-                      <tfoot>
+						<tfoot>
 							<tr>
+								<th></th>
 								<th>Name</th>
 								<th>Brand</th>
 								<th>Price</th>
 								<th>Qty. Available</th>
 								<th></th>
 							</tr>
-						</tfoot>	
+						</tfoot>
 					</table>
 
 
