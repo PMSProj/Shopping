@@ -27,7 +27,7 @@ public class Product implements Serializable {
 	private String description;
 	@Column(name = "unit_Price")
 	private double unitPrice;
-	private Integer qunatity;
+	private Integer quantity;
 
 	@Column(name = "is_active")
 	@JsonIgnore
@@ -97,13 +97,7 @@ public class Product implements Serializable {
 		this.unitPrice = unitPrice;
 	}
 
-	public Integer getQunatity() {
-		return qunatity;
-	}
-
-	public void setQunatity(Integer qunatity) {
-		this.qunatity = qunatity;
-	}
+	
 
 	public boolean isActive() {
 		return active;
@@ -147,6 +141,14 @@ public class Product implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
 	}
 
 }

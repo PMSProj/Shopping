@@ -33,7 +33,7 @@ $(function(){
 		var jsonUrl='';
 		if(window.categoryId==''){
 			jsonUrl=window.contextRoot+'/json/data/all/products';
-			console.log('Hi');
+			
 		}
 		else{
 			jsonUrl=window.contextRoot+'/json/data/category/'+window.categoryId+'/products';
@@ -48,8 +48,8 @@ $(function(){
 			columns:[      // collection of object
 				  {
 					data:'code',
-					mRender=function(data,type,row){
-					return '<img src="'+window.ContextRoot+'/resources/images/'+data+'.jpg"  class="dataTableImg"/>';
+					mRender : function(data,type,row){
+						return '<img src="'+window.ContextRoot+'/resources/images/'+data+'.jpg"  class="dataTableImg"/>';
 					}
 				},
 				{
@@ -60,8 +60,8 @@ $(function(){
 				},
 				{
 					data :'unitPrice',
-			        mRender: function(data,type,row){
-			        	return '$#8377; '+data
+			        mRender: function(data, type, row){
+			        	return '&#8360; '+data
 			        }
 				},
 				{
@@ -69,7 +69,7 @@ $(function(){
 				},
 				{
 					data :'id',
-					bSortable='false',
+					bSortable : 'false',
 					 mRender: function(data,type,row){
 				        	var str='';
 				        	str +='<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;';

@@ -21,7 +21,7 @@
 
 <title>Ecommerce</title>
 <script>
-	window.menu = '${title}'; //title from page controller
+	window.menu = '${title}';	 //title from page controller
 	
 	window.contextRoot='${contextRoot}'
 	
@@ -73,7 +73,7 @@
 			
 			<!-- Load only when user clicked single product -->
            <c:if
-				test="${userClickedShowProducts==true }">
+				test="${userClickedShowProduct==true }">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
 		</div>
